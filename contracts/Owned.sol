@@ -3,7 +3,7 @@ pragma solidity ^0.4.19;
 contract Owned {
     
     address public owner;
-    
+
     modifier requireOwner {
         require(owner == msg.sender);
         _;
@@ -21,4 +21,5 @@ contract Owned {
         LogOwnerChanged(msg.sender,owner);
         return true;
     }
+    
 }
